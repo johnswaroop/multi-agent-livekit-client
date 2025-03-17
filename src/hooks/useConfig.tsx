@@ -38,8 +38,8 @@ export type UserSettings = {
 
 // Fallback if NEXT_PUBLIC_APP_CONFIG is not set
 const defaultConfig: AppConfig = {
-  title: "LiveKit Agents Playground",
-  description: "A playground for testing LiveKit Agents",
+  title: "P101 | Voice Agent",
+  description: "Voice Agent",
   video_fit: "cover",
   settings: {
     editable: true,
