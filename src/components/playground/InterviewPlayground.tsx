@@ -78,10 +78,8 @@ export default function Playground({
 
   // Load selected persona from localStorage on component mount
   useEffect(() => {
-    const savedPersona = localStorage.getItem("PERSONA");
-    if (savedPersona) {
-      setSelectedPersona(savedPersona);
-    }
+    //set the selected persona to english_practice
+    setSelectedPersona("english_practice");
   }, []);
 
   // Save selected persona to localStorage when it changes
@@ -161,11 +159,8 @@ export default function Playground({
             <option value="" disabled>
               -- Select a Persona --
             </option>
-            {/* <option value="mvp_water">MVP Water Sales/Support Agent</option> */}
+
             <option value="english_practice">English Practice Assistant</option>
-            {/* <option value="c_interview">
-              C Programming Interview Assistant
-            </option> */}
           </select>
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-400">
             <svg
