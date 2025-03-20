@@ -34,6 +34,11 @@ export function TranscriptionTile({
   const [messages, setMessages] = useState<ChatMessageType[]>([]);
   const { chatMessages, send: sendChat } = useChat();
 
+  useEffect(() => {
+    //store the transcripts in the local storage
+    localStorage.setItem("transcripts", JSON.stringify(messages));
+  }, [messages]);
+
   // store transcripts
   useEffect(() => {
     agentMessages.segments.forEach((s) =>
